@@ -5,3 +5,155 @@
 @import 'global';
 
 
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+    }
+
+    &__btn {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+}
+
+.logo {
+    margin: 0 auto;
+}
+
+.menu {
+
+    padding-right: 15px;
+
+    &__list {
+        display: flex;
+    }
+
+    &__list-item {
+        padding-right: 45px;
+        padding-left: 35px;
+    }
+
+    &__list-link {
+        @extend %title-font;
+        color: rgba(54, 56, 56, 0.90);
+        line-height: 22px;
+    }
+}
+
+.footer {
+    &__content {
+        background-color: #DFDFDF;
+        padding: 60px 0 80px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info-title {
+        color: $title;
+        @extend %title-font;
+        margin-bottom: 14px;
+        line-height: 23px;
+
+    }
+
+    &__info {
+        width: 540px;
+    }
+
+    &__info-text {
+        margin-bottom: 16px;
+        max-width: 475px;
+    }
+
+    &__info-email {
+        font-weight: 600;
+        font-size: 14px;
+        color: $title;
+        margin-bottom: 22px;
+        padding-left: 30px;
+        display: inline-block;
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__form-input {
+        width: 100%;
+        border: none;
+        padding: 6px 10px 6px 10px;
+        border-radius: 21px;
+        background-color: transparent;
+        border: 1px solid rgba($title, 0.7);
+
+        &::placeholder {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+            color: #a1a1a1;
+        }
+    }
+
+    &__form-button {
+        background-color: $title;
+        border: none;
+        color: #fffff0;
+        border-radius: 21px;
+        font-weight: 600;
+        padding: 6px 12px;
+        min-width: 160px;
+        cursor: pointer;
+        margin-left: 9px;
+
+    }
+
+    &__social {
+        width: 125px;
+        margin-right: auto;
+        margin-left: 100px;
+    }
+
+    &__menu {
+        margin-right: 60px;
+        width: 125px;
+    }
+
+    &__social-item,
+    &__menu-item {
+        margin-bottom: 15px;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    &__social-link,
+    &__menu-link {
+        color: #707070;
+        display: flex;
+    }
+
+    &__social-link {
+        span {
+            display: inline-flex;
+            width: 22px;
+            align-items: center;
+        }
+    }
+
+    &__menu-link {}
+
+    &__copyright {
+        background-color: $title;
+        color: #a1a1a1;
+        text-align: center;
+        padding: 42px 0px 41px;
+    }
+}

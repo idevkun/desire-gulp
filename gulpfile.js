@@ -36,7 +36,11 @@ function images() {
 }
 
 function scripts() {
-  return src(["node_modules/jquery/dist/jquery.js", "app/js/main.js"])
+  return src([
+    "node_modules/jquery/dist/jquery.js",
+    "node_modules/slick-carousel/slick/slick.js",
+    "app/js/main.js",
+  ])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"))
@@ -44,9 +48,9 @@ function scripts() {
 }
 
 function styles() {
-  return src('app/scss/**/*.scss')
-  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-  .pipe(concat("style.min.css"))
+  return src("app/scss/**/*.scss")
+    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(concat("style.min.css"))
     .pipe(
       autoprefixer({
         overrideBrowserslist: ["last 10 versions"],
@@ -56,7 +60,6 @@ function styles() {
     .pipe(dest("app/css"))
     .pipe(browserSync.stream());
 }
-
 
 function build() {
   return src(

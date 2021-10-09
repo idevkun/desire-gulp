@@ -6,10 +6,19 @@ $(function () {
     $(".rightside-menu").addClass("rightside-menu--close");
   });
   
- /*  $("body").on("click", function () {
+  $(".top__slider").slick({
+    dots:true,
+    arrows:false,
+    fade:true,
+    autoplay:true
+  });
+
+
+
+ /*   $("body").on("click", function () {
     if(!($(".rightside-menu").hasClass("rightside-menu--close"))){
      console.log("gello");
      $(".rightside-menu").addClass("rightside-menu--close");
     }
-  }); */
+  });  */
 });
